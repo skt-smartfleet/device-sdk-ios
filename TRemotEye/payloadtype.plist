@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Trip</key>
+	<string>1</string>
+	<key>Micro_Trip</key>
+	<string>2</string>
+	<key>Diagnostic</key>
+	<string>3</string>
+	<key>HFD_Capability</key>
+	<string>4</string>
+	<key>HFD_Data</key>
+	<string>5</string>
+	<key>Driving</key>
+	<string>6</string>
+	<key>Parking</key>
+	<string>7</string>
+	<key>Battery</key>
+	<string>8</string>
+	<key>Unplugged</key>
+	<string>9</string>
+	<key>TurnOff</key>
+	<string>10</string>
+</dict>
+</plist>

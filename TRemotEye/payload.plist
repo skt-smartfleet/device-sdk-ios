@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TRE1</key>
+	<string>TRE_SendAttribute</string>
+	<key>TRE2</key>
+	<string>TRE_SendTelemerty</string>
+	<key>TRE3</key>
+	<string>TRE_SendMicroTrip</string>
+	<key>TRE4</key>
+	<string>TRE_SendTrip</string>
+	<key>TRE5</key>
+	<string>TRE_ProcessRpc</string>
+	<key>TRE6</key>
+	<string>TRE_SendHfd</string>
+	<key>TRE7</key>
+	<string>TRE_SendDiagInfo</string>
+	<key>TRE8</key>
+	<string>TRE_SendDrivingCollisionWarning</string>
+	<key>TRE9</key>
+	<string>TRE_SendParkingCollisionWarning</string>
+	<key>TRE10</key>
+	<string>TRE_SendBatteryWarning</string>
+	<key>TRE11</key>
+	<string>TRE_SendUnpluggedWarning</string>
+	<key>TRE12</key>
+	<string>TRE_SendTurnOffWarning</string>
+</dict>
+</plist>
