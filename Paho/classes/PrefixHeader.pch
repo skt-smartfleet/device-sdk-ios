@@ -1,0 +1,52 @@
+//
+//  PrefixHeader.pch
+//  TRemotEye
+//
+//  Created by boxer on 2017. 9. 20..
+//  Copyright © 2017년 Park. All rights reserved.
+//
+
+/*
+ MQTT broker 정보
+ IP : 223.39.127.140
+ PORT : 1883
+ TOKEN : 00000000000000011111
+ TOPIC : rpc/request
+ 
+ 실테스트 정보 (eclipse echo 서버인듯..)
+ IP: iot.eclipse.org
+ PORT : 1883
+ TOKEN : A1_TEST_TOKEN (user name)
+ TOPIC : planets/earth
+ */
+//#define MQTT_SERVER_HOST    @"smartfleet.sktelecom.com"
+//#define MQTT_SERVER_PORT    @"8883"
+#define MQTT_SERVER_HOST    @"localhost"
+#define MQTT_SERVER_PORT    @"3001"
+#define MQTT_USER_NAME      @"abcd1234"
+
+//#define MQTT_USER_NAME      @"00000000000000000001"
+
+#define PUBLISH_TOPIC_TRE           @"v1/sensors/me/tre"
+#define PUBLISH_TOPIC_TELEMETRY     @"v1/sensors/me/telemetry"
+#define PUBLISH_TOPIC_ATTRIBUTES    @"v1/sensors/me/attributes"
+
+#define SUBSCRIBE_TOPIC             @"v1/sensors/me/rpc/request/+"
+
+#define RPC_RESONSE_TOPIC           @"v1/sensors/me/rpc/response/"
+#define RPC_RESULT_TOPIC            @"v1/sensors/me/rpc/result/"
+#define RPC_REQUEST_TOPIC           @"v1/sensors/me/rpc/request/"
+
+#define DEVICE_ACTIVATION           @"activationReq"
+#define FIRMWARE_UPDATE             @"fwupdate"
+#define OBD_RESET                   @"reset"
+#define DEVICE_SERIAL_NUMBER_CHECK  @"serial"
+#define CLEAR_DEVICE_DATA           @"cleardata"
+#define FIRMWARE_UPDATE_CHUNK       @"fwupchunk"
+
+//2000 RPC 정상적 수행
+//2000 RPC 메시지 정상적으로 수신 
+#define SUCCESS_RESULT       @"2000"
+#define SUCCESS_RESPONSE     @"2000"
+
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1.0f]

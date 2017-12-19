@@ -22,10 +22,10 @@
 |keepalive | 60 |`keepalive`|
 |cleanSession | true | `setCleanSession(boolean)` |
 
-`$project/Users/nonghyeob02/Documents/Project/yoonsangho/MQTT/apple-mqtt-example-master/Paho/classes/PrefixHeader.pch`:
+`$project/Project Dir/Paho/classes/PrefixHeader.pch`:
 ```
-#define MQTT_SERVER_HOST    @"smartfleet.sktelecom.com" //@"iot.eclipse.org"
-#define MQTT_SERVER_PORT    @"8883" //@"1883"
+#define MQTT_SERVER_HOST    @"smartfleet.sktelecom.com"
+#define MQTT_SERVER_PORT    @"8883"
 #define MQTT_USER_NAME      @"00000000000000000001"
 
 #define PUBLISH_TOPIC_TRE           @"v1/sensors/me/tre"
@@ -51,7 +51,7 @@
 #define SUCCESS_RESPONSE     @"2000"
 ```
 
-`$project/Users/nonghyeob02/Documents/Project/yoonsangho/MQTT/apple-mqtt-example-master/Paho/classes/ViewController.m`:
+`$project/Project Dir/Paho/classes/ViewController.m`:
 ```
 #pragma mark - C Private prototypes
 void mqttConnectionSucceeded(void* context, MQTTAsync_successData* response);
@@ -61,6 +61,7 @@ void mqttConnectionLost(void* context, char* cause);
 void mqttSubscriptionSucceeded(void* context, MQTTAsync_successData* response);
 void mqttSubscriptionFailed(void* context, MQTTAsync_failureData* response);
 
+void mqttDeliveryComplete(void* context, MQTTAsync_token token);
 int mqttMessageArrived(void* context, char* topicName, int topicLen, MQTTAsync_message* message);
 
 void mqttUnsubscriptionSucceeded(void* context, MQTTAsync_successData* response);
@@ -251,6 +252,19 @@ void mqttPublishFailed(void* context, MQTTAsync_failureData* response);
 
 공통으로 plist 파일에 정의 되어 있는 Trip 정보를 설정하는 함수 입니다.
 
+```
+HEADER
+```
+Trip 헤더를 정의합니다.
+* Key
+* **ty** Trip 정보 수집시간
+* **ts** Trip Payload 타입
+* **ap** Micro Trip "0" 그외 nil
+* **pld** Trip Payload
+
+
+#### Trip Header
+
 
 ```
 TRE1.plist
@@ -397,6 +411,26 @@ Turn Off Warning 오브젝트를 정의합니다.
 
 ```
 int mqttMessageArrived(void* context, char* topicName, int topicLen, MQTTAsync_message* message);
+
+if ([strMethod isEqualToString:DEVICE_ACTIVATION]) {
+[strongSelf publishResponse:[NSString stringWithFormat:@"%@%@", RPC_RESONSE_TOPIC, rpcReqId] rpcType:TYPT_DEVICE_ACTIVATION];
+[strongSelf publishResult:[NSString stringWithFormat:@"%@%@", RPC_RESULT_TOPIC, rpcReqId] rpcType:TYPT_DEVICE_ACTIVATION];
+} else if ([strMethod isEqualToString:FIRMWARE_UPDATE]) {
+[strongSelf publishResponse:[NSString stringWithFormat:@"%@%@", RPC_RESONSE_TOPIC, rpcReqId] rpcType:TYPT_FIRMWARE_UPDATE];
+[strongSelf publishResult:[NSString stringWithFormat:@"%@%@", RPC_RESULT_TOPIC, rpcReqId] rpcType:TYPT_FIRMWARE_UPDATE];
+} else if ([strMethod isEqualToString:OBD_RESET]) {
+[strongSelf publishResponse:[NSString stringWithFormat:@"%@%@", RPC_RESONSE_TOPIC, rpcReqId] rpcType:TYPT_OBD_RESET];
+[strongSelf publishResult:[NSString stringWithFormat:@"%@%@", RPC_RESULT_TOPIC, rpcReqId] rpcType:TYPT_OBD_RESET];
+} else if ([strMethod isEqualToString:DEVICE_SERIAL_NUMBER_CHECK]) {
+[strongSelf publishResponse:[NSString stringWithFormat:@"%@%@", RPC_RESONSE_TOPIC, rpcReqId] rpcType:TYPT_DEVICE_SERIAL_NUMBER_CHECK];
+[strongSelf publishResult:[NSString stringWithFormat:@"%@%@", RPC_RESULT_TOPIC, rpcReqId] rpcType:TYPT_DEVICE_SERIAL_NUMBER_CHECK];
+} else if ([strMethod isEqualToString:CLEAR_DEVICE_DATA]) {
+[strongSelf publishResponse:[NSString stringWithFormat:@"%@%@", RPC_RESONSE_TOPIC, rpcReqId] rpcType:TYPT_CLEAR_DEVICE_DATA];
+[strongSelf publishResult:[NSString stringWithFormat:@"%@%@", RPC_RESULT_TOPIC, rpcReqId] rpcType:TYPT_CLEAR_DEVICE_DATA];
+} else if ([strMethod isEqualToString:FIRMWARE_UPDATE_CHUNK]) {
+[strongSelf publishResponse:[NSString stringWithFormat:@"%@%@", RPC_RESONSE_TOPIC, rpcReqId] rpcType:TYPT_FIRMWARE_UPDATE_CHUNK];
+[strongSelf publishResult:[NSString stringWithFormat:@"%@%@", RPC_RESULT_TOPIC, rpcReqId] rpcType:TYPT_FIRMWARE_UPDATE_CHUNK];
+}
 ```
 
 구독한 토픽으로 메세지를 받을 시 실행하는 콜백 함수입니다. RPC 요청은 해당 함수를 통해 처리합니다.

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E7539F21-1F3D-465A-9461-7F7816E5C923</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MQTT</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FE6DE93EDF98D7F65A438DC06469030E2AED95AC</key>
+		<string>https://github.com/relayr/apple-mqtt-example</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MQTT.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FE6DE93EDF98D7F65A438DC06469030E2AED95AC</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/relayr/apple-mqtt-example</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FE6DE93EDF98D7F65A438DC06469030E2AED95AC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FE6DE93EDF98D7F65A438DC06469030E2AED95AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>apple-mqtt-example</string>
+		</dict>
+	</array>
+</dict>
+</plist>

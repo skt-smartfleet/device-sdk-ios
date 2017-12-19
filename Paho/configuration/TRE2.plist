@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>tid</key>
+	<integer>156</integer>
+	<key>fc</key>
+	<integer>154</integer>
+	<key>lat</key>
+	<real>37.380646</real>
+	<key>lon</key>
+	<real>127.117784</real>
+	<key>lc</key>
+	<integer>39</integer>
+	<key>clt</key>
+	<real>922162228</real>
+	<key>cdit</key>
+	<integer>134</integer>
+	<key>rpm</key>
+	<integer>2000</integer>
+	<key>sp</key>
+	<integer>100</integer>
+	<key>em</key>
+	<integer>0</integer>
+	<key>el</key>
+	<integer>15</integer>
+	<key>xyz</key>
+	<string>10,30,30</string>
+	<key>vv</key>
+	<real>12.5</real>
+	<key>tpos</key>
+	<integer>90</integer>
+</dict>
+</plist>
