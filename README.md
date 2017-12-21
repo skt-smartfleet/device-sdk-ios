@@ -1,6 +1,6 @@
-# iOS Source for T-RemotEye
+# iOS Source for Smart[Fleet]
 
-본 코드는 T-RemotEye 기반 아이폰 코드를 제공합니다.
+본 코드는 Smart[Fleet] 플랫폼 기반 아이폰 코드를 제공합니다.
 
 ## Configure
 
@@ -76,14 +76,14 @@ void mqttDisconnectionFailed(void* context, MQTTAsync_failureData* response);
 
 ## Code Guide
 
-T-RemotEye Proxy에 접속, 메시지 전송 등을 위해  Class를 제공합니다.
+Smart[Fleet] Proxy에 접속, 메시지 전송 등을 위해  Class를 제공합니다.
 
 ### Connect
 
 ```
 - (void)serverConnect
 ```
-지정된 서버 정보로 TRE 플랫폼에 MQTTS 프로토콜로 접속합니다.
+지정된 서버 정보로 Smart[Fleet] 에 MQTTS 프로토콜로 접속합니다.
 
 * Parameters
   * N/A
